@@ -41,9 +41,11 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == bot.user:
         return
+
+    ##mommabee = discord.utils.get(discord.User, name = 'Clouded.Cat', discriminator = '2700')
    
     newclist = []
-    commandlist = {'!hello': 'Hello '+str(message.author.mention)+'! I love you :honeyheart:?',
+    commandlist = {'!hello': 'Hello '+str(message.author.mention)+'! I love you <:honeyheart:696740294934265976>',
                    '!beebot': 'I love my Bee Bot beeling!',
                    '!bedtime': 'Every bee needs its beeauty sleep. :zzz:',
                    '!sleep': 'You need to go to beed. :zzz:',
@@ -54,6 +56,7 @@ async def on_message(message):
                    '!water':'Everyone, stay hydrated!',
                    '!panic':'*Where is Eric???*',
                    '!mom': '*Do not make me call our large swarm of mom bees!*',
+                   '!callmom': 'Moooooom <@!548503002512752640>!!',
                    '!cute': 'Bee Gang cute.'}
 
     newrlist = ['go to bed @someone']
@@ -80,7 +83,7 @@ async def on_message(message):
     if message.content.find('Go'+'to'+'bed') and message.mentions != []:
         await message.channel.send('You really should try to sleep a bit '+message.mentions[0].mention+'. We will still be here when you wake up. Also, our large swarm of mom bees will be very proud. Goodnight! :star:')
 
-with open('token', 'r') as file:
+with open('tokenbb', 'r') as file:
     token = file.read()
 
 bot.run(token)
